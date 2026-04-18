@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>67th Parallel | Digital Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://googleapis.com');
+        
+        :root {
+            --arctic-black: #05070a;
+            --arctic-blue: #00d4ff;
+            --ice-silver: #e1e4e6;
+        }
+
+        body { 
+            background-color: var(--arctic-black); 
+            color: var(--ice-silver); 
+            font-family: 'Inter', sans-serif; 
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Анимация пульсации фона */
+        @keyframes pulse {
+            0%, 100% { opacity: 0.15; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(1.1); }
+        }
+
+        .glow-bg {
+            background: radial-gradient(circle at center, var(--arctic-blue) 0%, transparent 70%);
+            animation: pulse 10s infinite ease-in-out;
+        }
+
+        .grid-overlay {
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), 
+                              linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="fixed top-0 w-full z-50 p-6 flex justify-between items-center border-b border-white/5 backdrop-blur-lg">
+        <div class="text-[10px] font-bold tracking-[0.5em] uppercase">67th Parallel</div>
+        <div class="hidden md:flex space-x-10 text-[9px] uppercase tracking-[0.3em] opacity-50">
+            <a href="#services" class="hover:text-[#00d4ff] transition-all">Услуги</a>
+            <a href="#cases" class="hover:text-[#00d4ff] transition-all">Кейсы</a>
+            <a href="#contact" class="hover:text-[#00d4ff] transition-all">Контакт</a>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section class="relative h-screen flex flex-col justify-center items-center text-center overflow-hidden">
+        <!-- Декор фона -->
+        <div class="absolute inset-0 glow-bg z-0"></div>
+        <div class="absolute inset-0 grid-overlay z-0"></div>
+        
+        <div class="relative z-10 px-4">
+            <div class="text-[9px] uppercase tracking-[0.8em] text-[#00d4ff] mb-6 font-mono opacity-80">
+                System Status: Active
+            </div>
+            <h1 class="text-5xl md:text-[110px] font-thin tracking-tighter uppercase leading-none mb-6">
+                67th <span class="italic font-light">Parallel</span>
+            </h1>
+            <div class="h-[1px] w-24 bg-[#00d4ff] mx-auto mb-10 opacity-40"></div>
+            <p class="max-w-xl mx-auto text-xs md:text-sm opacity-40 font-light tracking-[0.3em] leading-relaxed uppercase">
+                Архитектура цифровых решений <br> в эстетике северного минимализма
+            </p>
+            <a href="#contact" class="inline-block mt-16 px-12 py-5 border border-[#00d4ff]/30 text-[#00d4ff] text-[10px] font-bold tracking-[0.5em] uppercase hover:bg-[#00d4ff]/10 transition-all duration-500">
+                Начать проект
+            </a>
+        </div>
+
+        <!-- Нижние координаты -->
+        <div class="absolute bottom-10 w-full flex justify-between px-10 text-[8px] opacity-20 tracking-widest font-mono uppercase">
+            <div>Lat: 66.5622° N</div>
+            <div class="hidden md:block">Navigation System v1.0</div>
+            <div>Long: 0.0000° E</div>
+        </div>
+    </section>
+
+    <!-- Секция Услуги -->
+    <section id="services" class="py-32 px-6 max-w-6xl mx-auto relative z-10">
+        <p class="text-[9px] uppercase tracking-[0.5em] text-[#00d4ff] mb-16 opacity-60">01. Инструментарий</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="group">
+                <div class="h-[1px] w-12 bg-[#00d4ff] mb-8 group-hover:w-full transition-all duration-700"></div>
+                <h3 class="text-xl font-light mb-4 uppercase tracking-widest">Разработка</h3>
+                <p class="text-xs opacity-40 leading-relaxed font-light">Проектирование высоконагруженных систем и экосистем на стыке технологий.</p>
+            </div>
+            <div class="group">
+                <div class="h-[1px] w-12 bg-[#00d4ff] mb-8 group-hover:w-full transition-all duration-700"></div>
+                <h3 class="text-xl font-light mb-4 uppercase tracking-widest">Стратегия</h3>
+                <p class="text-xs opacity-40 leading-relaxed font-light">Аудит бизнес-процессов и создание дорожных карт цифровой трансформации.</p>
+            </div>
+            <div class="group">
+                <div class="h-[1px] w-12 bg-[#00d4ff] mb-8 group-hover:w-full transition-all duration-700"></div>
+                <h3 class="text-xl font-light mb-4 uppercase tracking-widest">Аналитика</h3>
+                <p class="text-xs opacity-40 leading-relaxed font-light">Глубокое исследование данных для принятия точных управленческих решений.</p>
+            </div>
+        </div>
+    </section>
+	
+	    <!-- Секция Кейсы -->
+<!-- Секция Кейсы (Концептуальные решения) -->
+<section id="cases" class="py-32 border-t border-white/5 bg-white/[0.01]">
+    <div class="max-w-6xl mx-auto px-6">
+        <p class="text-[9px] uppercase tracking-[0.5em] text-[#00d4ff] mb-20 opacity-60">02. Концептуальные решения</p>
+        
+        <div class="space-y-32">
+            <!-- Кейс 1: Логистика -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-end group">
+                <div>
+                    <div class="text-[10px] font-mono opacity-20 mb-4 tracking-widest uppercase">Supply Chain / Concept</div>
+                    <h3 class="text-3xl md:text-5xl font-thin uppercase tracking-tighter mb-6 group-hover:text-[#00d4ff] transition-colors duration-500">
+                        Iceberg <br> Tracker
+                    </h3>
+                    <p class="text-xs opacity-40 leading-relaxed max-w-sm uppercase tracking-wider">
+                        Прототип системы мониторинга холодовой цепи. Интеграция IoT-датчиков с облачной платформой для контроля логистики биофармацевтики.
+                    </p>
+                    <div class="mt-6 text-[9px] font-mono opacity-20 uppercase tracking-widest">
+                        Stack: Go / MQTT / Next.js
+                    </div>
+                </div>
+                <div class="text-left md:text-right">
+                    <div class="text-5xl md:text-7xl font-thin italic text-[#00d4ff]">99.8%</div>
+                    <div class="text-[9px] uppercase tracking-[0.3em] opacity-30 mt-4">Точность телеметрии</div>
+                </div>
+            </div>
+
+            <!-- Кейс 2: Промышленная CRM -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-end group border-t border-white/5 pt-20">
+                <div>
+                    <div class="text-[10px] font-mono opacity-20 mb-4 tracking-widest uppercase">Industrial CRM / Concept</div>
+                    <h3 class="text-3xl md:text-5xl font-thin uppercase tracking-tighter mb-6 group-hover:text-[#00d4ff] transition-colors duration-500">
+                        Deep Scan <br> Systems
+                    </h3>
+                    <p class="text-xs opacity-40 leading-relaxed max-w-sm uppercase tracking-wider">
+                        Кастомная архитектура управления сложными продажами в B2B. Автоматизация документооборота и технического аудита сделок.
+                    </p>
+                    <div class="mt-6 text-[9px] font-mono opacity-20 uppercase tracking-widest">
+                        Stack: Python / PostgreSQL / Docker
+                    </div>
+                </div>
+                <div class="text-left md:text-right">
+                    <div class="text-5xl md:text-7xl font-thin italic text-[#00d4ff]">-40%</div>
+                    <div class="text-[9px] uppercase tracking-[0.3em] opacity-30 mt-4">Бюрократической нагрузки</div>
+                </div>
+            </div>
+
+            <!-- Кейс 3: Финтех -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-end group border-t border-white/5 pt-20">
+                <div>
+                    <div class="text-[10px] font-mono opacity-20 mb-4 tracking-widest uppercase">FinTech / Concept</div>
+                    <h3 class="text-3xl md:text-5xl font-thin uppercase tracking-tighter mb-6 group-hover:text-[#00d4ff] transition-colors duration-500">
+                        Nordic <br> Flow
+                    </h3>
+                    <p class="text-xs opacity-40 leading-relaxed max-w-sm uppercase tracking-wider">
+                        Высокопроизводительный платежный интерфейс с фокусом на минимализм. Оптимизация путей пользователя для снижения отказов на чекауте.
+                    </p>
+                    <div class="mt-6 text-[9px] font-mono opacity-20 uppercase tracking-widest">
+                        Stack: React / Node.js / Stripe API
+                    </div>
+                </div>
+                <div class="text-left md:text-right">
+                    <div class="text-5xl md:text-7xl font-thin italic text-[#00d4ff]">120ms</div>
+                    <div class="text-[9px] uppercase tracking-[0.3em] opacity-30 mt-4">Отклик интерфейса</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Футер и Контакты -->
+    <section id="contact" class="py-40 border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-4xl md:text-7xl font-thin uppercase tracking-tighter mb-16 italic">
+                Выход на связь
+            </h2>
+            <div class="flex flex-col items-center space-y-8">
+                <a href="mailto:office@67parallel.com" class="text-xl md:text-2xl font-light hover:text-[#00d4ff] transition-all">
+                    office@67parallel.com
+                </a>
+                <div class="h-px w-12 bg-white/20"></div>
+                <div class="text-[10px] uppercase tracking-[0.5em] opacity-30">
+                    Lat: 66.5622° N | Long: 0.0000° E
+                </div>
+            </div>
+        </div>
+        <!-- Декор фона в футере -->
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#00d4ff]/5 blur-[120px] rounded-full"></div>
+    </section>
+
+    <footer class="py-10 text-center border-t border-white/5 opacity-20 text-[8px] uppercase tracking-[0.4em]">
+        &copy; 2024 67th Parallel. Engineering with northern precision.
+    </footer>
+
+
+</body>
+</html>
